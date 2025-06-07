@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React from "react";
+import "./App.css";
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <main className="main_page">
+      <img src="/images/logo.svg" alt="Logo" />
+      <p>
+        We are launching <strong>soon!</strong>
       </p>
-    </>
-  )
-}
+      <p>Subscribe and get notified</p>
 
-export default App
+      <form>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="subit" aria-label="Notify me">
+          Notify Me
+        </button>
+      </form>
+
+      <div className="dash_board">
+        <img src="/images/illustration-dashboard.png" alt="Illustration" />
+      </div>
+
+      <footer className="footer">
+        <div className="footer_logo">
+          <img src="/images/facebook-4.png" alt="Logo" />
+          <img src="/images/twitter.png" alt="Logo" />
+          <img src="/images/instagram-3.png" alt="Logo" />
+        </div>
+        <p> &copy; Copyright Ping. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+};
+
+export default App;
