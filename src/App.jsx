@@ -3,7 +3,7 @@ import "./App.css";
 const App = () => {
   return (
     <main className="main_page">
-      <img src="/images/logo.svg" alt="Logo" />
+      <img src="/images/logo.svg" alt="Logo" className="logo" />
       <p>
         We are launching <strong>soon!</strong>
       </p>
