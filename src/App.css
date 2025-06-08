@@ -20,11 +20,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-weight: 300;
 }
 
 .main_page {
-  border: 2px solid red;
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,5 +33,123 @@ body {
 }
 
 .logo {
-  border: 2px solid red;
+  margin: 2rem 0rem;
+}
+
+.main_text {
+  /* border: 2px solid red; */
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--gray);
+}
+
+strong {
+  color: var(--very-dark-blue);
+}
+
+.subscribe_text {
+  font-size: 1rem;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* border: 2px solid; */
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 5rem;
+}
+
+.input_email,
+.btn {
+  border: 2px solid var(--pale-blue);
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 100px;
+  outline: none;
+  color: var(--very-dark-blue);
+}
+
+.input_email::placeholder {
+  color: var(--pale-blue);
+}
+
+.btn {
+  border: none;
+  background-color: var(--blue);
+  color: white;
+  box-shadow: 0px 5px 20px 0px hsla(223, 87%, 63%, 0.588);
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.illustration {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0em 2rem;
+}
+
+.footer {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer_logo {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer_logo img {
+  width: 40px;
+  height: auto;
+  border: 1px solid var(--pale-blue);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.footer_logo img:hover {
+  background-color: var(--blue);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+
+.copyright_info {
+  font-size: 1.2rem;
+  color: var(--gray);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .main_text {
+    font-size: 3.5rem;
+  }
+  .subscribe_text {
+    font-size: 1.2rem;
+  }
+
+  .input_email {
+    width: 300%;
+    max-width: 500px;
+  }
+
+  .form {
+    flex-direction: row;
+    gap: 1rem;
+    /* border: 2px solid red; */
+    width: 100%;
+    max-width: 770px;
+  }
 }
