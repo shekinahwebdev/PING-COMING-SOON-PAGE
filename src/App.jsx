@@ -8,15 +8,25 @@ const App = () => {
     },
     validate: (values) => {
       const errors = {};
-      if (!values.email) {
-        errors.email = "Required";
-      } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-      ) {
+      // if (!values.email.trim()) {
+      //   errors.email = "Please provide a valid email address";
+      // }
+      if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
         errors.email = "Please provide a valid email address";
       }
       return errors;
     },
+    onSubmit: (values) => {
+      console.log("Form submitted with values:", values);
+      // page reload
+      window.location.reload();
+    },
+    validateOnChange: true,
+    validateOnBlur: true,
+    // If the email is touched and the input is empty, then the user press the btn to sumbit the error message should show
+    // if the user touches the input and then clicks outside, the error message should showå
+    // if the user touches the input and start to input something, the error message shouldn't show
+    // if the user touches the input and then deletes everything, the error message shouldn't show
   });
 
   return (
@@ -27,22 +37,23 @@ const App = () => {
       </p>
       <p className="subscribe_text">Subscribe and get notified</p>
 
-      <form className="form" onSubmit={formik.hanldeSubmit}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          onChange={formik.handleChange}
-          // className="input_email"
-          className={`input_email ${
-            formik.touched.email && formik.errors.email ? "error" : ""
-          }`}
-          required
-        />
-        <p className="error_message">{formik.errors.email}</p>
-        {/* <p className="error_message">
-          {formik.touched.email && formik.errors.email}
-        </p> */}
+      <form className="form" onSubmit={formik.handleSubmit}>
+        <div className="input_container">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            // className="input_email"
+            className={`input_email ${
+              formik.touched.email && formik.errors.email ? "error" : ""
+            }`}
+          />
+          {formik.touched.email && formik.errors.email ? (
+            <p className="error_message">{formik.errors.email}</p>
+          ) : null}
+        </div>
         <button type="submit" aria-label="Notify me" className="btn">
           Notify Me
         </button>

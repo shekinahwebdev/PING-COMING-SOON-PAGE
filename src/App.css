@@ -55,6 +55,7 @@ strong {
 .form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
   /* border: 2px solid; */
   width: 80%;
@@ -75,6 +76,25 @@ strong {
 
 .input_email::placeholder {
   color: var(--pale-blue);
+}
+
+.input_container {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error_message {
+  color: var(--light-red);
+  font-size: 14px;
+  text-align: center;
+}
+
+.input_email.error {
+  border: 1px solid var(--light-red);
+  border-radius: 100px;
+  font-style: italic;
 }
 
 .btn {
