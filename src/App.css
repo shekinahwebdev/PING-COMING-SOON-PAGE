@@ -83,6 +83,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .error_message {
@@ -162,13 +163,22 @@ strong {
 
   .input_email {
     width: 300%;
-    max-width: 500px;
+    max-width: 535px;
+  }
+
+  .btn {
+    max-width: 220px;
+    margin-bottom: 0rem;
+  }
+
+  .input_container {
+    display: flex;
+    width: 100%;
   }
 
   .form {
     flex-direction: row;
-    gap: 1rem;
-    /* border: 2px solid red; */
+    gap: 0rem;
     width: 100%;
     max-width: 770px;
   }
