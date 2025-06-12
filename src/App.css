@@ -161,25 +161,26 @@ strong {
     font-size: 1.2rem;
   }
 
-  .input_email {
-    width: 300%;
-    max-width: 535px;
-  }
-
   .btn {
+    width: 100%;
     max-width: 220px;
     margin-bottom: 0rem;
   }
 
   .input_container {
-    display: flex;
-    width: 100%;
+    flex: 1;
+  }
+
+  .error_message {
+    text-align: justify;
+    margin-left: 1.2rem;
+    margin-top: 0.5rem;
   }
 
   .form {
     flex-direction: row;
-    gap: 0rem;
-    width: 100%;
+    align-items: flex-start;
+    gap: 1rem;
     max-width: 770px;
   }
 }
